@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="wr.png">
+  <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+  <title>Word | Repeator</title>
+
+</head>
+<body>
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 col-lg-4"></div>
+      <div class="col-md-4 col-sm-12 col-lg-4">
+        <h1><span class="bg-primary text-white pl-3 pr-2 rounded"> Word </span><span></span> Repeator</h1>
+        <form class="mt-5" id="word-form">
+          <div class="form-group">
+            <label for="text"><h5>Enter Text: </h5></label>
+            <input type="text" id="text" class="form-control " placeholder="Enter your text" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="text"><h5>Enter Looping Number: </h5></label>
+            <input type="number" id="no" class="form-control" placeholder="Enter looping number" autocomplete="off">
+          </div>
+          <div class="form-group">
+              <input type="submit" class="btn btn-success btn-block mt-4" value="Repeat it" onclick="repeator();">
+          </div>
+          <div class="card border-primary mb-3 mt-5" style="max-width: 25rem;">
+            <div class="card-body">
+              <h4 class="card-title text-center">Total Output: <span id="count"></span></h4><hr>
+              <p class="card-text" id="output"></p>
+            </div>
+          </div>          
+        </form>
+      </div>
+      <div class="col-md-4 col-sm-12 col-lg-4"></div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
