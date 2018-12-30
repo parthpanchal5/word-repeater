@@ -1,2 +1,2 @@
 # word-repeator
-An app which lets you repeat your inputted text multiple times. 
+Word Repeator is an app which lets users give the inputs like word or sentence and iteration count number and displays the result with respect to iteration count.
