@@ -1,29 +1,34 @@
+
 function repeator(){
   document.getElementById("word-form").addEventListener("click", function(e){
     e.preventDefault();
+
     let text = document.querySelector('#text').value;
     let number = document.querySelector('#no').value;
     let output = document.querySelector('#output');
 
     // input
-    if(text === ''){
+    if(text == ''){
       alert('Please enter your text');
-    }else if(number === ''){
-      alert('Please enter a number');
     } 
+    else if(number == ''){
+      alert('Please enter a number (1-2000)');
+    } 
+    else if(number == 0){
+      alert('Please enter a number (1-2000)');
+    }
     // final output
     else{
       for(var i = 0; i < number; i++){
-        console.log(number[i]);
-        output = text;
         document.querySelector('#output').innerHTML += text + '&nbsp;';
-      }
-      
-      document.getElementById('text').value = '';
-      document.getElementById('no').value = '';      
+      }  
       document.getElementById('count').innerHTML = number;
-    }      
+    }          
   });
 }
-
-
+   
+function refresh(){
+  document.getElementById('text').value = '';
+  document.getElementById('no').value = ''; 
+  window.location.reload();
+} 
