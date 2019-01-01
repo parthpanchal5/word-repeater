@@ -1,4 +1,3 @@
-
 function repeator(){
   document.getElementById("word-form").addEventListener("click", function(e){
     e.preventDefault();
@@ -15,7 +14,7 @@ function repeator(){
       alert('Please enter a number (1-2000)');
     } 
     else if(number == 0){
-      alert('Please enter a number (1-2000)');
+      alert('Enter a non-zero positive integer');
     }
     // final output
     else{
@@ -30,7 +29,16 @@ function repeator(){
 function refresh(){
   document.getElementById('text').value = '';
   document.getElementById('no').value = ''; 
-    document.getElementById('output').innerText = '';
-
+  document.getElementById('output').innerText = '';
   window.location.reload();
 } 
+
+function copyText(){
+	var copyText = document.getElementById("output");
+	copyText.select();
+	document.execCommand("copy");
+	alert('Text copied to clipboard');	
+	refresh();
+}
+
+
