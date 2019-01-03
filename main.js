@@ -8,13 +8,25 @@ function repeator(){
 
     // input
     if(text == ''){
-      alert('Please enter your text');
+      swal({
+        type: 'error',
+        title: 'Empty',
+        text: 'Please enter text',
+      });    
     } 
     else if(number == ''){
-      alert('Please enter a number (1-2000)');
+      swal({
+        type: 'error',
+        title: 'Empty',
+        text: 'PLease enter number',
+      });       
     } 
-    else if(number == 0){
-      alert('Enter a non-zero positive integer');
+    else if(number == 0 || number > 2000){
+      swal({
+        type: 'error',
+        title: 'Range',
+        text: 'Please enter from range (1-2000)',
+      });       
     }
     // final output
     else{
@@ -36,9 +48,11 @@ function refresh(){
 function copyText(){
 	var copyText = document.getElementById("output");
 	copyText.select();
-	document.execCommand("copy");
-	alert('Text copied to clipboard');	
-	refresh();
+  document.execCommand("copy");
+  swal({
+    type: 'success',
+    title: 'Text Copied',
+    showConfirmButton: false,    
+  });      	
+  refresh();
 }
-
-
