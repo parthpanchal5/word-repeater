@@ -42,7 +42,6 @@ function refresh(){
   document.getElementById('text').value = '';
   document.getElementById('no').value = ''; 
   document.getElementById('output').innerText = '';
-  window.location.reload();
 } 
 
 function copyText(){
