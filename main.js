@@ -1,5 +1,5 @@
 function repeator(){
-  document.getElementById("word-form").addEventListener("click", function(e){
+  document.getElementById("word-form").addEventListener("submit", function(e){
     e.preventDefault();
 
     let text = document.querySelector('#text').value;
@@ -30,6 +30,7 @@ function repeator(){
     }
     // final output
     else{
+      document.querySelector('#output').innerHTML = '';
       for(var i = 0; i < number; i++){
         document.querySelector('#output').innerHTML += text + '&nbsp;';
       }  
@@ -44,13 +45,8 @@ function copyText(){
   swal({
     type: 'success',
     title: 'Text Copied',
-    timer: 3200 
   });  
-  refresh()
+  document.getElementById('count').innerHTML = 0;
+  document.querySelector('#output').innerHTML = '';
+  document.getElementById("word-form").reset();
 }
-function refresh(){
-  document.getElementById('no').value = '';
-  document.getElementById('text').value = '';
-  document.querySelector('output').innerHTML = '';
-  location.reload();
-} 
