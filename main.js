@@ -46,7 +46,7 @@ function copyText(){
     type: 'success',
     title: 'Text Copied',
   });  
-  document.getElementById('count').innerHTML = 0;
+  document.getElementById('count').innerHTML = '';
   document.querySelector('#output').innerHTML = '';
   document.getElementById("word-form").reset();
 }
