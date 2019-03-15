@@ -44,7 +44,11 @@ function copyText(){
   document.execCommand("copy");
   swal({
     type: 'success',
-    title: 'Text Copied',
+    toast: true,
+    showConfirmButton: false,
+    position: 'top-end',
+    timer: 2000,
+    title: 'Text Copied'
   });  
   document.getElementById('count').innerHTML = '';
   document.querySelector('#output').innerHTML = '';
